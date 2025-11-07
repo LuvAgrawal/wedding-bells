@@ -9,7 +9,7 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <>
-            <header className='flex items-center justify-between py-2 px-4 shadow-md rounded-b-lg'>
+            <header className='sticky top-0 left-0 z-50 w-full flex items-center justify-between py-2 px-4 shadow-md rounded-b-lg bg-white'>
                 <div className="logo">
                     <img src={logo} className='h-[10dvh]' alt="Wedding Bells Logo" />
                 </div>
@@ -35,7 +35,7 @@ const Header = () => {
                     {isOpen ? <ArrowBackIcon /> : <MenuIcon />}
                 </div>
             </header>
-            {isOpen && <ul className='uppercase font-[Roboto Slab] h-screen bg-[#00000055] lg:hidden' onClick={()=> setIsOpen(false)}>
+            {isOpen && <ul className='fixed z-999 top-[13dvh] w-full uppercase font-[Roboto Slab] h-screen bg-[#00000055] lg:hidden' onClick={() => setIsOpen(false)}>
                 {navData.map((item, index) => (
                     <li key={index} className='bg-[#f8f8f8] p-2 border-b font-semibold border-gray-300'>
                         <Link to={item.link}>{item.title}</Link>

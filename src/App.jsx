@@ -1,12 +1,14 @@
 import { Route, Routes } from "react-router-dom";
-import Header from "./components/semantics/Header";
+import Layout from "./components/semantics/Layout";
+import HomePage from "./pages/HomePage";
 
 const App = () => {
   return <>
-    <Routes>
-      <Route path="/" element={<h1>Hello World</h1>} />
-      <Route path="/test" element={<Header />} />
-    </Routes>
+    <Layout >
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </Layout>
   </>;
 };
 
