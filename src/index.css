@@ -4,3 +4,6 @@
 .cursive {
   font-family: "Momo Signature", cursive;
 }
+html{
+  scroll-behavior: smooth;
+}
