@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { navData, socialsData } from '../../assets/data/semanticsData'
 import logo from '../../assets/images/logo.png'
 import MenuIcon from '@mui/icons-material/Menu';
@@ -17,7 +16,7 @@ const Header = () => {
                     <ul className='flex items-center justify-center'>
                         {navData.map((item, index) => (
                             <li key={index} className='px-5'>
-                                <Link to={item.link}>{item.title}</Link>
+                                <a href={item.link}>{item.title}</a>
                             </li>
                         ))}
                     </ul>
